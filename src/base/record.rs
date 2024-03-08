@@ -863,7 +863,7 @@ impl<Name: fmt::Debug> fmt::Debug for RecordHeader<Name> {
 /// [`ParseRecordData`]: trait.ParseRecordData.html
 /// [`to_record`]: #method.to_record
 /// [`into_record`]: #method.into_record
-#[derive(Clone)]
+#[derive(Clone, Debug)]
 pub struct ParsedRecord<'a, Octs: Octets + ?Sized> {
     /// The record’s header.
     header: RecordHeader<ParsedName<&'a Octs>>,
